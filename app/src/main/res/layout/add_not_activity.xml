@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/linear_margin"
+    android:layout_marginTop="@dimen/linear_margin"
+    android:layout_marginEnd="@dimen/linear_margin"
+    android:layout_marginBottom="@dimen/linear_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Not ID" />
+
+            <EditText
+                android:id="@+id/insert_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="@dimen/layout_margin"
+                android:layout_marginLeft="@dimen/layout_margin"
+                android:width="@dimen/layout_width" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Not Konusu" />
+
+            <EditText
+
+                android:id="@+id/insert_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_margin"
+                android:layout_marginLeft="@dimen/layout_margin"
+                android:width="@dimen/layout_width2" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Not" />
+
+            <EditText
+                android:id="@+id/insert_role"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_column="2"
+                android:layout_marginStart="@dimen/layout_margin"
+                android:layout_marginLeft="@dimen/layout_margin"
+                android:width="@dimen/layout_width" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOT EKLE" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:text="KAPAT" />
+
+    </LinearLayout>
+</LinearLayout>

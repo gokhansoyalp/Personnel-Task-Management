@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".AlarmActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Alarm Bilgileri"
+        android:textColor="@android:color/holo_red_dark"
+        android:textFontWeight="@android:integer/config_longAnimTime"
+        android:textSize="25sp" />
+
+    <!--Alarm için saat belirler -->
+    <EditText
+        android:id="@+id/etHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="Saat"
+        android:inputType="number" />
+
+    <!--Alarm için dakika belirler -->
+    <EditText
+        android:id="@+id/etMinute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="Dakika"
+        android:inputType="number" />
+
+    <!--Alarm için mesaj belirler -->
+    <EditText
+        android:id="@+id/etMesage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:gravity="left|top"
+        android:hint="Mesaj"
+        android:inputType="textPersonName" />
+
+    <!--Alarm tekrarlanma günleri burada belirlenir. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbSun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Pzr" />
+
+        <CheckBox
+            android:id="@+id/cbMon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Ptesi" />
+
+        <CheckBox
+            android:id="@+id/cbTue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Salı" />
+
+        <CheckBox
+            android:id="@+id/cbWed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Çrş" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbThu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Prş" />
+
+        <CheckBox
+            android:id="@+id/cbFri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Cuma" />
+
+        <CheckBox
+            android:id="@+id/cbSat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Ctesi" />
+
+        <CheckBox
+            android:id="@+id/cbOther"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="Other"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <!--Alarm verilen bilgilere göre oluşturulur.-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="createAlarm"
+        android:text="Alarm Oluştur"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>
